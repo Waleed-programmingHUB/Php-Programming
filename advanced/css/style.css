@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@100&family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+    color: #262626;
+    background-color: #f1f1f1;
+
+}
+
+.logo {
+    padding: 10px;
+    width: 250px;
+    background-color: #858ebb;
+    margin: auto;
+}
+.logo-brand{
+    width: 100%;
+    background-color: #858ebb;  
+}
+.logo-title{
+    padding: 5px;
+    color: #fff;
+    width: 70%;
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+}
+header {
+    background-color: #454545;
+}
+.content{
+    width: 80%;
+    background-color: #f1f1f1;
+    margin: auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+footer{
+background-color: #858ebb;  
+text-align: center;
+}
+footer h4{
+font-family: 'Noto Sans', sans-serif;
+padding: 10px;
+margin: 0px;
+}
