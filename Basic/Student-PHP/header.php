@@ -19,7 +19,7 @@
                 $alert = true;
                 echo $_SESSION['mail'];
                 echo '
-                        <a href="http://192.168.100.14:8000/student-php/logout.php">Log Out</a>';
+                        <a href="http://127.0.0.1:8200/logout.php">Log Out</a>';
             }
             ?>
 
@@ -27,25 +27,25 @@
     </div>
     <nav>
         <div class="link">
-            <a href="/student-php">Home</a>
+            <a href="/">Home</a>
         </div>
         <?php
         if ($alert) {
             # code...
             echo ' <div class="link">
-                        <a href="/student-php/create.php">Create</a>
+                        <a href="/create.php">Create</a>
                     </div>       
                      <div class="link">
-                        <a href="/student-php/update.php">Update</a>
+                        <a href="/update.php">Update</a>
                     </div>
             <div class="link">
-                <a href="/student-php/delete.php">Delete</a>
+                <a href="/delete.php">Delete</a>
             </div>';
         }
         ?>
 
         <div class="link">
-            <a href="/student-php/read.php">Read</a>
+            <a href="/read.php">Read</a>
         </div>
     </nav>
 </header>

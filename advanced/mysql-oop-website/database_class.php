@@ -150,8 +150,10 @@
                 $start = ($page - 1) * $limit;
                 $sql_select .= " LIMIT $start, $limit";
             }
+
             // query
             $query = $this->my_sql->query($sql_select);
+
             if ($query){
                 $this->result = $query->fetch_all(MYSQLI_ASSOC);
                 return true;
@@ -180,7 +182,48 @@
                     }
                     $query = $this->my_sql->query($sql);
                     $total_record = $query->fetch_array();
-                    echo "Total record " . $total_record;
+                    $total_record = $total_record[0];
+
+                    $total_page = ceil($total_record / $limit);
+
+                    $url = basename($_SERVER['PHP_SELF']);
+                    if (isset($_GET['page'])){
+                        $page =$_GET['page'];
+                    }else{
+                        $page = 1;
+                    }
+
+                    $output = "<ul class='pagination'>";
+
+                    // previous page
+                    if ($page > 1){
+                        $output .= "<li>";
+                        $output .= "<a href='$url?page=".($page - 1)."'> Prev</a>";
+                        $output .= "</li>";
+                    }
+                    if ($total_record > $limit){
+
+                        for ($num = 1 ; $num <= $total_page; $num++){
+                            if ($num == $page){
+                                $cls = "class='active'";
+                            }else{
+                                $cls = "";
+                            }
+                            $output .= "<li>";
+                            $output .= "<a $cls href='$url?page=$num'> $num</a>";
+                            $output .= "</li>";
+
+                        }
+                    }
+                    if ($total_page>$page){
+                        $output .= "<li>";
+                        $output .= "<a href='$url?page=".($page + 1)."'> Next</a>";
+                        $output .= "</li>";
+                    }
+                    // next page
+
+                    $output .= "<ul/>";
+                        echo $output;
                     //
                 }else{
                     return  false;

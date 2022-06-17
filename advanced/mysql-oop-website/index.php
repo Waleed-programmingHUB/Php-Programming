@@ -23,13 +23,21 @@
 //    $myDB->sql_Query("SELECT * FROM personal");
 //    echo '<pre>';
 //    print_r($myDB->GetResult());
-    $myDB->select_data('personal',"*" ,null,null,null,2);
+
+    // joining table students to city-table
+    $joinTable = "citytable ON students.s_city = citytable.city_id";
+    // columnName
+    $columnName = "students.s_id, students.s_name, students.s_age ,citytable.city_name";
+    // limit
+    $limit = 3;
+    $myDB->select_data('students',$columnName ,$joinTable,null,null,$limit);
 
     echo "<h2>Print Data form database in OOPs</h2>";
     echo "<pre>";
-    print_r($myDB->GetResult());
-    $myDB->pagination('personal',"*" ,null,null,2);
 
+    print_r($myDB->GetResult());
+    $myDB->pagination('students',$joinTable ,null,$limit);
+    $myDB->GetResult();
     ?>
 </body>
 </html>

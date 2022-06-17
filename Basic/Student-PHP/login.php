@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $q = mysqli_query($c, $sql_login);
     if ($row = mysqli_fetch_assoc($q)) {
         $_SESSION['mail'] = $_POST['email'];
-        header('location :http://192.168.100.14:8000/student-php/');
+        header('location :http://127.0.0.1:8200/');
     } else {
         echo '<div class="heading-title" style="width:100%;"><h2 style="color:red; padding-left:50px;">Invalid user!</h2></div>';
     }

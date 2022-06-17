@@ -1,0 +1,97 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@100&family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+html,body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #e0e0e0;
+}
+
+header{
+    width: 100%;
+}
+
+header h3{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 10px;
+}
+header nav{
+    width: 75%;
+    margin: auto;
+}
+.text{
+    width: 100%;
+    text-align: center;
+}
+nav ul {
+    margin: auto;
+    padding: 0px;
+    list-style-type: none;
+}
+nav ul li{
+    display: flex;
+    float: left;
+}
+nav ul li a {
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    border-bottom: darkcyan 1px solid;
+}
+.user{
+    width: 600px;
+    display: inline-flex;
+}
+.user h4{
+    float: left;
+    margin: 0px;
+    padding: 10px;
+}
+
+section {
+    width: 70%;
+    padding-top: 50px;
+    margin: auto;
+}
+#msg-name,#msg-age,#msg-city{
+    color: red;
+}
+.form-data{
+    padding-bottom: 20px;
+    border: 1px solid #111;
+}
+.header{
+    padding-top:20px ;
+    padding-bottom:20px ;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #111;
+}
+.header h3{
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+form{
+    padding:50px;
+}
+.form-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+label{
+    width: 500px;
+    margin-right: 100px;
+}
+.input-element{
+    padding: 5px;
+    width: 500px;
+
+}

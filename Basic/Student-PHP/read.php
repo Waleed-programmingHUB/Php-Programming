@@ -36,21 +36,24 @@
         <?php
         if (isset($_POST['search'])) {
             # code...
-            $id = $_POST['studentId'];
+            $id = $_POST['studentId'];  
             require_once 'database/config.php';
-            // read data from database
-            $sql_read = "SELECT * FROM student_details WHERE studentID = {$id}";
-            // query
-            $res = mysqli_query($c, $sql_read);
-            if (mysqli_num_rows($res) > 0) {
+            
+         
                 # code...
-
+                // read data from database
+                $sql_read = "SELECT * FROM student_details WHERE studentID = {$id}";
+                // query
+                $res = mysqli_query($c, $sql_read);
+                if (mysqli_num_rows($res) > 0) {
+                    # code...
+                    
                 while ($row = mysqli_fetch_assoc($res)) {
                     # code...
-
-        ?>
+                    
+                    ?>
         <div class="border-line">
-
+            
             <h2>
                 Search Id Result : { <?php echo $row['studentID']; ?> }
             </h2>
@@ -70,7 +73,7 @@
                 <label for="studentFName">
                     Gender :
                 </label>
-                        <?php
+                <?php
                         if ($row['studentGender'] == 'M') {
                             echo '<span> Male</span>';
                         } else {
@@ -143,6 +146,7 @@
             // close connection
             mysqli_close($c);
         } // if statement end
+  
 
         ?>
     </section>

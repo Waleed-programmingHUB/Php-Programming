@@ -9,6 +9,6 @@
  session_start();
  session_unset();
  session_destroy();
- header('location:http://192.168.100.14:8000/student-php/login.php');
+ header('location:http://127.0.0.1:8200/login.php');
 
 ?>

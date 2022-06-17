@@ -23,6 +23,6 @@
  }
  mysqli_close($c);
 }
-header('location:http://192.168.100.14:8000/student-php/');
+header('location:http://127.0.0.1:8200/');
 
 ?>
